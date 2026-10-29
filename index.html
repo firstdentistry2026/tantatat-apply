@@ -738,13 +738,14 @@
             <label>ระดับการศึกษาสูงสุด / Highest level <span class="req">*</span></label>
             <div class="choices">
               <label><input type="radio" name="edu_level" value="ประถมศึกษา" required=""> ประถมศึกษา</label>
-              <label><input type="radio" name="edu_level" value="มัธยมศึกษา"> มัธยมศึกษา</label>
-              <label><input type="radio" name="edu_level" value="อาชีวศึกษา"> อาชีวศึกษา</label>
-              <label><input type="radio" name="edu_level" value="อนุปริญญา"> อนุปริญญา</label>
+              <label><input type="radio" name="edu_level" value="มัธยมศึกษาตอนต้น (ม.ต้น)"> มัธยมศึกษาตอนต้น (ม.ต้น)</label>
+              <label><input type="radio" name="edu_level" value="มัธยมศึกษาตอนปลาย (ม.ปลาย)"> มัธยมศึกษาตอนปลาย (ม.ปลาย)</label>
+              <label><input type="radio" name="edu_level" value="ปวช."> ปวช.</label>
+              <label><input type="radio" name="edu_level" value="ปวส."> ปวส.</label>
               <label><input type="radio" name="edu_level" value="ปริญญาตรี"> ปริญญาตรี</label>
               <label><input type="radio" name="edu_level" value="ปริญญาโท"> ปริญญาโท</label>
               <label><input type="radio" name="edu_level" value="ปริญญาเอก"> ปริญญาเอก</label>
-            </div>
+              </div>
           </div>
           <div class="grid-2">
             <div class="field"><label>ชื่อสถานศึกษา <span class="req">*</span></label><input type="text" name="edu_school" required=""></div>
@@ -782,21 +783,21 @@
         <section class="section">
           <h2><span class="num">10</span> ความสามารถทางภาษา / Proficiency in Languages</h2>
           <div class="field">
-            <label>ภาษาอังกฤษ (English)</label>
+            <label>ภาษาอังกฤษ (English) <span class="req">*</span></label>
             <table class="lang">
               <thead><tr><th>ทักษะ / Skill</th><th>พอใช้</th><th>ปานกลาง</th><th>ดี</th><th>ดีมาก</th></tr></thead>
               <tbody>
-                <tr><td>พูด (Speaking)</td><td><input type="radio" name="en_speak" value="พอใช้"></td><td><input type="radio" name="en_speak" value="ปานกลาง"></td><td><input type="radio" name="en_speak" value="ดี"></td><td><input type="radio" name="en_speak" value="ดีมาก"></td></tr>
-                <tr><td>เขียน (Writing)</td><td><input type="radio" name="en_write" value="พอใช้"></td><td><input type="radio" name="en_write" value="ปานกลาง"></td><td><input type="radio" name="en_write" value="ดี"></td><td><input type="radio" name="en_write" value="ดีมาก"></td></tr>
-                <tr><td>อ่าน (Reading)</td><td><input type="radio" name="en_read" value="พอใช้"></td><td><input type="radio" name="en_read" value="ปานกลาง"></td><td><input type="radio" name="en_read" value="ดี"></td><td><input type="radio" name="en_read" value="ดีมาก"></td></tr>
-                <tr><td>เข้าใจ (Understanding)</td><td><input type="radio" name="en_understand" value="พอใช้"></td><td><input type="radio" name="en_understand" value="ปานกลาง"></td><td><input type="radio" name="en_understand" value="ดี"></td><td><input type="radio" name="en_understand" value="ดีมาก"></td></tr>
+                <tr><td>พูด (Speaking)</td><td><input type="radio" name="en_speak" value="พอใช้" required=""></td><td><input type="radio" name="en_speak" value="ปานกลาง"></td><td><input type="radio" name="en_speak" value="ดี"></td><td><input type="radio" name="en_speak" value="ดีมาก"></td></tr>
+                <tr><td>เขียน (Writing)</td><td><input type="radio" name="en_write" value="พอใช้" required=""></td><td><input type="radio" name="en_write" value="ปานกลาง"></td><td><input type="radio" name="en_write" value="ดี"></td><td><input type="radio" name="en_write" value="ดีมาก"></td></tr>
+                <tr><td>อ่าน (Reading)</td><td><input type="radio" name="en_read" value="พอใช้" required=""></td><td><input type="radio" name="en_read" value="ปานกลาง"></td><td><input type="radio" name="en_read" value="ดี"></td><td><input type="radio" name="en_read" value="ดีมาก"></td></tr>
+                <tr><td>เข้าใจ (Understanding)</td><td><input type="radio" name="en_understand" value="พอใช้" required=""></td><td><input type="radio" name="en_understand" value="ปานกลาง"></td><td><input type="radio" name="en_understand" value="ดี"></td><td><input type="radio" name="en_understand" value="ดีมาก"></td></tr>
               </tbody>
             </table>
           </div>
           <div class="field">
-            <label>ท่านมีความสามารถภาษาอื่นนอกเหนือจากภาษาอังกฤษหรือไม่?</label>
+            <label>ท่านมีความสามารถภาษาอื่นนอกเหนือจากภาษาอังกฤษหรือไม่? <span class="req">*</span></label>
             <div class="choices">
-              <label><input type="radio" name="other_lang_opt" value="ไม่มี" onclick="toggleOL(false)"> ไม่มี</label>
+              <label><input type="radio" name="other_lang_opt" value="ไม่มี" required="" onclick="toggleOL(false)"> ไม่มี</label>
               <label><input type="radio" name="other_lang_opt" value="มี" onclick="toggleOL(true)"> มี</label>
             </div>
             <div id="olBox" style="display:none;margin-top:10px;">
@@ -827,46 +828,46 @@
         <section class="section">
           <h2><span class="num">12</span> เรื่องทั่วไป / General</h2>
           <div class="field">
-            <label>ท่านมีญาติหรือคนรู้จักทำงานในบริษัทฯ หรือไม่?</label>
+            <label>ท่านมีญาติหรือคนรู้จักทำงานในบริษัทฯ หรือไม่? <span class="req">*</span></label>
             <div class="choices">
-              <label><input type="radio" name="g_relative" value="ไม่มี"> ไม่มี</label>
+              <label><input type="radio" name="g_relative" value="ไม่มี" required=""> ไม่มี</label>
               <label><input type="radio" name="g_relative" value="มี"> มี</label>
             </div>
             <div class="inline-other"><span>ถ้ามี โปรดระบุ:</span><input type="text" name="g_relative_other"></div>
           </div>
           <div class="field">
-            <label>ท่านเคยทำงานกับ Tantatat หรือไม่?</label>
+            <label>ท่านเคยทำงานกับ Tantatat หรือไม่? <span class="req">*</span></label>
             <div class="choices">
-              <label><input type="radio" name="g_worked" value="ไม่เคย"> ไม่เคย</label>
+              <label><input type="radio" name="g_worked" value="ไม่เคย" required=""> ไม่เคย</label>
               <label><input type="radio" name="g_worked" value="เคย"> เคย</label>
             </div>
             <div class="inline-other"><span>ถ้าเคย โปรดระบุ:</span><input type="text" name="g_worked_other"></div>
           </div>
           <div class="field">
-            <label>สามารถทำงานเป็นกะได้หรือไม่?</label>
+            <label>สามารถทำงานเป็นกะได้หรือไม่? <span class="req">*</span></label>
             <div class="choices">
-              <label><input type="radio" name="g_shift" value="ได้"> ได้</label>
+              <label><input type="radio" name="g_shift" value="ได้" required=""> ได้</label>
               <label><input type="radio" name="g_shift" value="ไม่ได้"> ไม่ได้</label>
             </div>
           </div>
           <div class="field">
-            <label>ขณะนี้ท่านกำลังศึกษาอยู่หรือไม่?</label>
+            <label>ขณะนี้ท่านกำลังศึกษาอยู่หรือไม่? <span class="req">*</span></label>
             <div class="choices">
-              <label><input type="radio" name="g_study" value="ไม่ได้ศึกษา"> ไม่ได้ศึกษา</label>
+              <label><input type="radio" name="g_study" value="ไม่ได้ศึกษา" required=""> ไม่ได้ศึกษา</label>
               <label><input type="radio" name="g_study" value="กำลังศึกษา"> กำลังศึกษา</label>
             </div>
           </div>
           <div class="field">
-            <label>สามารถไปปฏิบัติงานต่างจังหวัดได้หรือไม่?</label>
+            <label>สามารถไปปฏิบัติงานต่างจังหวัดได้หรือไม่? <span class="req">*</span></label>
             <div class="choices">
-              <label><input type="radio" name="g_travel" value="ได้"> ได้</label>
+              <label><input type="radio" name="g_travel" value="ได้" required=""> ได้</label>
               <label><input type="radio" name="g_travel" value="ไม่ได้"> ไม่ได้</label>
             </div>
           </div>
           <div class="field">
-            <label>ท่านเคยถูกศาลสั่งให้ล้มละลายหรือไม่?</label>
+            <label>ท่านเคยถูกศาลสั่งให้ล้มละลายหรือไม่? <span class="req">*</span></label>
             <div class="choices">
-              <label><input type="radio" name="g_bankrupt" value="ไม่เคย"> ไม่เคย</label>
+              <label><input type="radio" name="g_bankrupt" value="ไม่เคย" required=""> ไม่เคย</label>
               <label><input type="radio" name="g_bankrupt" value="เคย"> เคย</label>
             </div>
           </div>
@@ -887,8 +888,7 @@
 
         <div class="actions">
           <button type="submit" class="act btn-primary">📤 ส่งใบสมัคร / Submit</button>
-          <button type="button" class="act btn-ghost" onclick="window.print()">🖨️ พิมพ์ / บันทึกเป็น PDF</button>
-          <button type="reset" class="act btn-ghost" onclick="setTimeout(function(){if(form_reset_hook)form_reset_hook();toggleOL(false);document.getElementById('curAddr').style.display='none';},0)">ล้างข้อมูล / Reset</button>
+                    <button type="reset" class="act btn-ghost" onclick="setTimeout(function(){if(form_reset_hook)form_reset_hook();toggleOL(false);document.getElementById('curAddr').style.display='none';},0)">ล้างข้อมูล / Reset</button>
           <span id="submitMsg" style="align-self:center;font-weight:600;"></span>
         </div>
       </main>
@@ -965,7 +965,7 @@
   var HR_PASSWORD = "2468";                             // รหัสผ่านเข้าหน้า HR Admin
   // ==========================
 
-  function toggleOL(on){document.getElementById('olBox').style.display=on?'block':'none';var n=document.getElementById('olName');n.required=on;if(!on)n.value='';}
+  function toggleOL(on){document.getElementById('olBox').style.display=on?'block':'none';var n=document.getElementById('olName');n.required=on;if(!on)n.value='';['ol_speak','ol_write','ol_read','ol_understand'].forEach(function(k){var r=document.querySelectorAll('input[name="'+k+'"]');r.forEach(function(x){if(!on)x.checked=false;});if(r[0])r[0].required=on;});}
   /* ---------- สลับหน้า ---------- */
   function showForm(){ document.getElementById('formView').classList.remove('hr-hidden'); document.getElementById('loginView').classList.add('hr-hidden'); document.getElementById('hrView').classList.add('hr-hidden'); }
   function showLogin(){ document.getElementById('formView').classList.add('hr-hidden'); document.getElementById('loginView').classList.remove('hr-hidden'); document.getElementById('hrView').classList.add('hr-hidden'); document.getElementById('pwInput').value=''; document.getElementById('pwErr').textContent=''; document.getElementById('pwInput').focus(); }
@@ -1155,7 +1155,7 @@
     var sk=g(o,'skills');
     var has=function(x){return sk.indexOf(x)>=0;};
     var lvl=g(o,'edu_level');
-    var eduRows=[['ประถมศึกษา',['ประถมศึกษา']],['มัธยมศึกษา',['มัธยมศึกษา']],['อาชีวศึกษา',['อาชีวศึกษา']],['อนุปริญญา',['อนุปริญญา']],['ปริญญาตรี',['ปริญญาตรี']],['ปริญญาโทขึ้นไป',['ปริญญาโท','ปริญญาเอก']]];
+    var eduRows=[['ประถมศึกษา',['ประถมศึกษา']],['มัธยมศึกษาตอนต้น',['มัธยมศึกษาตอนต้น (ม.ต้น)']],['มัธยมศึกษาตอนปลาย',['มัธยมศึกษาตอนปลาย (ม.ปลาย)']],['ปวช.',['ปวช.']],['ปวส.',['ปวส.']],['ปริญญาตรี',['ปริญญาตรี']],['ปริญญาโทขึ้นไป',['ปริญญาโท','ปริญญาเอก']]];
     var edu=eduRows.map(function(r){var m=r[1].indexOf(lvl)>=0; return '<tr><td>'+r[0]+'</td><td>'+(m?V('edu_school'):'')+'</td><td>'+(m?V('edu_major'):'')+'</td><td>'+(m?V('edu_year'):'')+'</td><td>'+(m?V('edu_gpa'):'')+'</td></tr>';}).join('');
     var jobs=[1,2,3,4].map(function(i){ if(i>3||!g(o,'job'+i+'_company')) return '<tr class="e"><td></td><td></td><td></td><td></td><td></td><td></td></tr>'; var pr=splitPeriod(g(o,'job'+i+'_period')); return '<tr><td>'+esc(pr[0])+'</td><td>'+esc(pr[1])+'</td><td>'+V('job'+i+'_company')+'</td><td>'+V('job'+i+'_position')+'</td><td>'+V('job'+i+'_salary')+'</td><td>'+V('job'+i+'_reason')+'</td></tr>';}).join('');
     var yes=g(o,'consent')==='ยินยอม';
