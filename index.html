@@ -545,6 +545,7 @@
   .drow .k{color:var(--muted);font-weight:600;}
   @media(max-width:640px){.drow{grid-template-columns:1fr;}}
   .pdfbtn{background:#0f766e;color:#fff;border:none;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;font-family:inherit;}
+  .photo-box:empty{display:none}
   .photo-box img{width:100%;height:100%;object-fit:cover;border-radius:6px}
 </style>
 <style>.app-signature-pad{border:1px solid var(--line,#cbd5e1);border-radius:12px;padding:14px;margin-top:16px;break-inside:avoid}.app-signature-pad>label{display:block;font-weight:600;margin:0 0 8px}.app-signature-pad canvas{display:block;width:100%;height:auto;aspect-ratio:10/3;background:#fff;border:1px solid #8795a6;border-radius:8px;touch-action:none;cursor:crosshair}.app-signature-tools{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px}.app-signature-tools button{min-height:44px;padding:8px 14px;border:1px solid var(--brand,#0f766e);border-radius:8px;background:var(--card,#fff);color:var(--brand-dark,#115e59);font:inherit}.app-signature-pad small{color:var(--muted,#475569)}.app-signature-message{margin:12px 0;color:#0f766e}.app-signature-message.error{color:#b91c1c}.app-signature-date{padding:12px 0;font-size:13px}@media print{.app-signature-tools{display:none!important}}
@@ -557,7 +558,7 @@
   <div class="wrap">
     <form id="applicationForm">
       <header class="form-head">
-        <div class="photo-box" id="photoBox">ติดรูปถ่าย<br>Photo<br>(1–2 นิ้ว)</div>
+        <div class="photo-box" id="photoBox"></div>
         <h1>ใบสมัครงาน / APPLICATION FORM</h1>
         <div class="co">TANTATAT Clinic Company Limited / บริษัท ทันตทัต คลินิก จำกัด</div>
         <div class="sub">กรุณากรอกข้อมูลให้ครบถ้วนตามความเป็นจริง · Please complete all required fields truthfully</div>
@@ -964,7 +965,7 @@
   function resetPhoto(){
     document.getElementById('photoData').value='';
     var pv=document.getElementById('photoPreview'); pv.style.display='none'; pv.removeAttribute('src');
-    document.getElementById('photoBox').innerHTML='ติดรูปถ่าย<br>Photo<br>(1–2 นิ้ว)';
+    document.getElementById('photoBox').textContent='';
   }
   document.getElementById('photoFile').addEventListener('change',function(){
     var f=this.files&&this.files[0]; if(!f){ resetPhoto(); return; }
@@ -1137,7 +1138,7 @@
      +'.foot{text-align:right;font-size:10px;margin-top:8px}.cr{display:grid;grid-template-columns:1fr 110px 110px;padding:7px 0 7px 20px}.consent h2{text-align:center;font-size:17px;margin:4px 0}.consent p{line-height:1.8}.sig{text-align:right;margin-top:18px;line-height:1.9}.certification{font-size:11px;line-height:1.45}.consent .sig{margin-top:20px}';
     var h='<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><title>ใบสมัคร - '+esc(fullTH(o))+'</title><style>'+css+'</style></head><body>';
     // ---- page 1
-    h+='<div class="page"><div class="print-content"><div class="hd"><img src="'+LOGO_SRC+'"><h1>ใบสมัครงาน / APPLICATION FORM</h1><div class="photo">'+(g(o,'photo').indexOf('data:image')===0?'<img src="'+g(o,'photo')+'" style="width:100%;height:100%;object-fit:cover">':'Photo 1"')+'</div></div>';
+    h+='<div class="page"><div class="print-content"><div class="hd"><img src="'+LOGO_SRC+'"><h1>ใบสมัครงาน / APPLICATION FORM</h1><div class="photo">'+(g(o,'photo').indexOf('data:image')===0?'<img src="'+g(o,'photo')+'" style="width:100%;height:100%;object-fit:cover">':'')+'</div></div>';
     h+='<div class="warn">คำเตือน: โปรดอ่านและพิจารณาให้เข้าใจก่อนเขียนข้อความลงในใบสมัคร หากภายหลังการจ้างปรากฏว่าข้อความที่ท่านแจ้งไว้ไม่เป็นความจริง ถือว่าสภาพพนักงานสิ้นสุดลงทันที<br>(Please read instruction carefully. False statements may result in immediate termination.)</div>';
     h+='<table>';
     h+='<tr><td colspan="6" class="sh">ตำแหน่งงาน / Job Position</td></tr>';
